@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/lave/static/css/main.073c9b0a.css",
-    "main.js": "/lave/static/js/main.cdd419f4.js",
+    "main.css": "/lave/static/css/main.61cdcbf2.css",
+    "main.js": "/lave/static/js/main.9949263a.js",
     "static/js/787.c6cae65f.chunk.js": "/lave/static/js/787.c6cae65f.chunk.js",
-    "static/media/logo.svg": "/lave/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/hanna-morris-3EkT6xb4K9w-unsplash.jpg": "/lave/static/media/hanna-morris-3EkT6xb4K9w-unsplash.5cc5ef79712fc3798460.jpg",
+    "static/media/pexels-shelagh-murphy-2883380.jpg": "/lave/static/media/pexels-shelagh-murphy-2883380.ae3624d35bf9902499e9.jpg",
     "index.html": "/lave/index.html",
-    "main.073c9b0a.css.map": "/lave/static/css/main.073c9b0a.css.map",
-    "main.cdd419f4.js.map": "/lave/static/js/main.cdd419f4.js.map",
+    "main.61cdcbf2.css.map": "/lave/static/css/main.61cdcbf2.css.map",
+    "main.9949263a.js.map": "/lave/static/js/main.9949263a.js.map",
     "787.c6cae65f.chunk.js.map": "/lave/static/js/787.c6cae65f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.cdd419f4.js"
+    "static/css/main.61cdcbf2.css",
+    "static/js/main.9949263a.js"
   ]
 }
