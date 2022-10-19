@@ -24,7 +24,7 @@ const Blog = () => {
             <div className='p-8'>
               <SupportIcon className='w-16 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]'/>
               <h3 className='font-bold text-2xl my-6'>Team</h3>
-              <p className='text-gray-600 text-xl'>the founder of this organisation is DENNIS LWANGA</p>
+              <p className='text-gray-600 text-xl'>The founder of this organisation is DENNIS LWANGA</p>
             </div>
             <div className='bg-slate-100 pl-8 py-4'>
               <p className='flex items-center text-indigo-600'>Contact Us <ArrowSmRightIcon className='w-5 ml-2'/></p>
@@ -34,7 +34,7 @@ const Blog = () => {
             <div className='p-8'>
               <PhoneIcon className='w-16 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]'/>
               <h3 className='font-bold text-2xl my-6'>Secretary</h3>
-              <p className='text-gray-600 text-xl'>the founder of this organisation is DENNIS LWANGA</p>
+              <p className='text-gray-600 text-xl'>The secretary of this organisation is DARLINE LWANGA</p>
             </div>
             <div className='bg-slate-100 pl-8 py-4'>
               <p className='flex items-center text-indigo-600'>Contact Us <ArrowSmRightIcon className='w-5 ml-2'/></p>
@@ -44,7 +44,7 @@ const Blog = () => {
             <div className='p-8'>
               <ChipIcon className='w-16 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]'/>
               <h3 className='font-bold text-2xl my-6'>Consultant</h3>
-              <p className='text-gray-600 text-xl'>the founder of this organisation is DENNIS LWANGA</p>
+              <p className='text-gray-600 text-xl'>This organisation is founded on the values of the government</p>
             </div>
             <div className='bg-slate-100 pl-8 py-4'>
               <p className='flex items-center text-indigo-600'>Contact Us <ArrowSmRightIcon className='w-5 ml-2'/></p>
