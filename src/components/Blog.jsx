@@ -7,7 +7,7 @@ import suppoetImg from '../assets/pexels-shelagh-murphy-2883380.jpg'
 
 const Blog = () => {
   return (
-  <div className='w-full h-screen mt-24'> 
+  <div name='nature' className='w-full mt-24'> 
       <div className='w-full h-[700px] bg-gray-900/90 absolute'>
         <img className='w-full h-full object-cover mix-blend-overlay' src={suppoetImg} alt="/" />
       </div>

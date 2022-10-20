@@ -4,6 +4,9 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import About from './components/About';
 import Blog from './components/Blog';
+import AllInOne from './components/AllInOne';
+import Donations from './components/Donations';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,7 +14,10 @@ function App() {
   <Navbar />
   <Hero />
   <About />
-   <Blog />
+  <Blog />
+  <AllInOne />
+  <Donations />
+  <Footer />
 
     </>
   );
