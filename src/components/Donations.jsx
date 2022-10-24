@@ -19,7 +19,7 @@ const Donations = () => {
                     <div>
                         <p className='text-6xl font-bold py-4 flex'>$10<span className='text-xl text-slate-500 flex flex-col-reverse'>/mo</span></p>
                     </div>
-                   <p className='text-2xl py-8 text-slate-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos veritatis placeat libero velit voluptates soluta totam mollitia atque iste modi porro et quibusdam quaerat possimus tempora praesentium sapiente, distinctio quasi!</p>
+                   <p className='text-2xl py-8 text-slate-500'>Join our Monthly donars and be able to contribute to the livelihood of our members, our monthly members recieve full transparency of the running of the organisation, this also adds you to our newsletter of the organisation.</p>
                 <div>
                     <button className='w-full py-4 my-4'>Donate</button>
                 </div>
@@ -29,7 +29,7 @@ const Donations = () => {
                     <div>
                         <p className='text-6xl font-bold py-4 flex'>$20</p>
                     </div>
-                   <p className='text-2xl py-8 text-slate-500'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos veritatis placeat libero velit voluptates soluta totam mollitia atque iste modi porro et quibusdam quaerat possimus tempora praesentium sapiente, distinctio quasi!</p>
+                   <p className='text-2xl py-8 text-slate-500'>You can too make a one-time donation to the organisation. These donations are used to acqiure the basic necessities for the families we take care of, these range from sanitary wear for female to meals and education.</p>
                 <div>
                     <button className='w-full py-4 my-4'>Donate</button>
                 </div>
