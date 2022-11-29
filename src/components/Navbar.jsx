@@ -24,10 +24,10 @@ const Navbar = () => {
         <li><Link to="donations" smooth={true} offset={-50} duration={500}>Donations</Link></li>
         </ul>
       </div>
-      <div className='hidden md:flex pr-4'>
+   { /*   <div className='hidden md:flex pr-4'>
         <button className='border-none bg-transparent text-black mr-4'>Sign In</button>
         <button className='px-8 py-3'>Sign Up</button>
-      </div>
+  </div> */ }
       <div className='md:hidden' onClick={handleClick}>
         {!nav ? <MenuIcon className='w-5' /> :  <XIcon className='w-5' />}
       
@@ -40,10 +40,10 @@ const Navbar = () => {
         <li className='border-b-2 border-zinc-300 w-full'><Link onClick={handleClose} to="nature" smooth={true} offset={-50} duration={500}>Nature</Link></li>
         <li className='border-b-2 border-zinc-300 w-full'><Link onClick={handleClose} to="values" smooth={true} offset={-100} duration={500}>Values</Link></li>
         <li className='border-b-2 border-zinc-300 w-full'><Link onClick={handleClose} to="donations" smooth={true} offset={-50} duration={500}>Donations</Link></li>
-        <div className='flex flex-col my-4 '>
+       { /* <div className='flex flex-col my-4 '>
           <button className='bg-transparent text-indigo-600 px-8 py-3 mb-4'>Sign In</button>
           <button className='px-8 py-3'>Sign Up</button>
-        </div>
+</div> */ }
     </ul>
 
     </nav>

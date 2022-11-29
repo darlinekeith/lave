@@ -6,8 +6,7 @@ const About = () => {
         <div className='max-w-[1240px] mx-auto'>
             <div className='text-center'>
                 <h2 className='text-5xl font-bold'>How we work</h2>
-                <p className='text-3xl py-6 text-gray-600'>Prevention of child abuse and GBV by sensitizing the community and providing continuous counseling services to those intending to abuse the rights of children and teenager girls.</p>
-            </div>
+                <p className='text-3xl py-6 text-gray-600'>The organization carries out monthly based home visits to beneficiary children and elderly. During the home visits, beneficiary children and the elderly received support ranging from psycho-social interventions, continuous needs assessments and related packages on parenting especially to the children</p></div>
 
             <div className='grid md:grid-cols-3 gap-1 px-2 text-center'>
                 <div className='border py-8 rounded-xl shadow-xl'>
