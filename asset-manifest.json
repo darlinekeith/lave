@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/lave/static/css/main.40129d97.css",
-    "main.js": "/lave/static/js/main.02db98af.js",
+    "main.css": "/lave/static/css/main.2ff6e165.css",
+    "main.js": "/lave/static/js/main.c1f7f737.js",
     "static/js/787.c6cae65f.chunk.js": "/lave/static/js/787.c6cae65f.chunk.js",
     "static/media/pexels-shelagh-murphy-2883380.jpg": "/lave/static/media/pexels-shelagh-murphy-2883380.ae3624d35bf9902499e9.jpg",
     "static/media/child-ga48769257_1280.jpg": "/lave/static/media/child-ga48769257_1280.9ae5591eacbc4b0868eb.jpg",
+    "static/media/LAVE Logo-02.png": "/lave/static/media/LAVE Logo-02.c632f56ebedade18fe3e.png",
     "index.html": "/lave/index.html",
-    "main.40129d97.css.map": "/lave/static/css/main.40129d97.css.map",
-    "main.02db98af.js.map": "/lave/static/js/main.02db98af.js.map",
+    "main.2ff6e165.css.map": "/lave/static/css/main.2ff6e165.css.map",
+    "main.c1f7f737.js.map": "/lave/static/js/main.c1f7f737.js.map",
     "787.c6cae65f.chunk.js.map": "/lave/static/js/787.c6cae65f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.40129d97.css",
-    "static/js/main.02db98af.js"
+    "static/css/main.2ff6e165.css",
+    "static/js/main.c1f7f737.js"
   ]
 }
