@@ -3,13 +3,14 @@ import React from 'react'
 const Donations = () => {
   return (
     <div name='donations' className='w-full text-white my-24'>
-        <div  className='w-full h-[800px] bg-slate-900 absolute mix-blend-overlay'></div>
+        <div className='w-full h-[800px] bg-slate-900 absolute  mix-blend-overlay' ></div>
+       
+       <div className='max-w-[1240px] mx-auto py-12'>
 
-        <div className='max-w-[1240px] mx-auto py-12'>
             <div className='text-center py-8 text-slate-300'>
                 <h2 className='text-3xl uppercase'>Donations</h2>
                 <h3 className='text-5xl font-bold text-white py-8'>You have a role you can play</h3>
-                <p className='text-3xl'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam molestiae accusamus pariatur sequi explicabo cumque quia eos consequatur, enim aliquid perspiciatis, at nihil ratione repellendus veritatis nam eveniet maxime dolore.</p>
+                <p className='text-3xl'>Together, we can provide a world for everyone to believe in. Partner with us.</p>
             </div>
 
             <div className='grid md:grid-cols-2'>

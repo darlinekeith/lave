@@ -5,6 +5,8 @@ import { Link, animateScroll as scroll } from 'react-scroll'
 
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
 
+import logos from '../assets/LAVE Logo-02.png'
+
 const Navbar = () => {
   const [nav,  setNav] = useState(false)
   const handleClick = () => setNav(!nav)
@@ -15,7 +17,7 @@ const Navbar = () => {
     <nav className='h-[80px] w-full z-20 top-0 left-0 bg-zinc-200 fixed drop-shadow-lg'>
       <div className='px-2 flex justify-between items-center w-full h-full'>
       <div className='flex items-center'>
-        <h1 className='text-3xl font-bold mr-4  sm:text-4xl'>LAVE.</h1>
+        <img className='flex object-contain h-80 w-44' src={logos} alt='/'/> 
         <ul  className='hidden md:flex'>
         <li><Link to="home" smooth={true} offset={0} duration={500}>Home</Link></li>
         <li><Link to="about" smooth={true} offset={-200} duration={500}>About</Link></li>

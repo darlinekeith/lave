@@ -18,7 +18,7 @@ const About = () => {
                     <p className='text-gray-400 mt-2'>Dedication</p>
                 </div>
                 <div className='border py-8 rounded-xl shadow-xl'>
-                    <p className='text-6xl font-bold text-indigo-600'>1000</p>
+                    <p className='text-6xl font-bold text-indigo-600'>Over 20</p>
                     <p className='text-gray-400 mt-2'>Families</p>
                 </div>
             </div>
