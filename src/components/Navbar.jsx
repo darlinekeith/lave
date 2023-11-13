@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 
-import { Link, animateScroll as scroll } from 'react-scroll'
+import { Link } from 'react-scroll'
 
 
 import {MenuIcon, XIcon} from '@heroicons/react/outline'
