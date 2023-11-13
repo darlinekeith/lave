@@ -23,7 +23,7 @@ const Blog = () => {
           <div className='bg-white rounded-xl shadow-2xl'>
             <div className='p-8'>
               <SupportIcon className='w-16 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]'/>
-              <h3 className='font-bold text-2xl my-6'>Team</h3>
+              <h3 className='font-bold text-2xl my-6'>Founder</h3>
               <p className='text-gray-600 text-xl'>The founder of this organisation is DENNIS LWANGA</p>
             </div>
             <div className='bg-slate-100 pl-8 py-4'>
@@ -33,8 +33,8 @@ const Blog = () => {
           <div className='bg-white rounded-xl shadow-2xl'>
             <div className='p-8'>
               <PhoneIcon className='w-16 p-4 bg-indigo-600 text-white rounded-lg mt-[-4rem]'/>
-              <h3 className='font-bold text-2xl my-6'>Secretary</h3>
-              <p className='text-gray-600 text-xl'>The secretary of this organisation is DARLINE LWANGA</p>
+              <h3 className='font-bold text-2xl my-6'>Director</h3>
+              <p className='text-gray-600 text-xl'>The director of this organisation is Mr.Salim</p>
             </div>
             <div className='bg-slate-100 pl-8 py-4'>
               <p className='flex items-center text-indigo-600'>Contact +256773443986 <ArrowSmRightIcon className='w-5 ml-2'/></p>
