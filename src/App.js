@@ -1,25 +1,23 @@
 
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
-import About from './components/About';
-import Blog from './components/Blog';
-import AllInOne from './components/AllInOne';
-import Donations from './components/Donations';
-import Footer from './components/Footer';
+import PhotoGallery from './components/PhotoGallery';
 
-function App() {
+const App = () => {
   return (
-    <>
-  <Navbar />
-  <Hero />
-  <About />
-  <Blog />
-  <AllInOne />
-  <Donations />
-  <Footer />
-
-    </>
+    <Router>
+      <>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/photoGallery" element={<PhotoGallery />} />
+        </Routes>
+        
+      </>
+    </Router>
   );
 }
 
