@@ -1,52 +1,55 @@
 import React from 'react';
+import Carousel from './carousel';
 
 const PhotoGallery = () => {
-  const photos = [
-    'url1.jpg',
-    'url2.jpg',
-    'url3.jpg',
-    'url4.jpg',
-    'url5.jpg',
-    'url6.jpg',
-    'url7.jpg',
-    'url8.jpg',
-    'url9.jpg',
-    'url10.jpg',
-    'url11.jpg',
-    'url12.jpg',
-    'url13.jpg',
-    'url14.jpg',
-    'url15.jpg',
-  ];
-
-  const chunkArray = (array, chunkSize) => {
-    const result = [];
-    for (let i = 0; i < array.length; i += chunkSize) {
-      result.push(array.slice(i, i + chunkSize));
-    }
-    return result;
-  };
-
-  const photoRows = chunkArray(photos, 5);
-
   return (
-    <div style={{ fontFamily: 'Arial, sans-serif', textAlign: 'center', padding: '20px' }}>
-      <h2 style={{ color: '#333' }}>Photo Gallery</h2>
-      {photoRows.map((row, rowIndex) => (
-        <div key={rowIndex} style={{ display: 'flex', marginBottom: '20px' }}>
-          {row.map((photo, index) => (
-            <div key={index} style={{ marginRight: '10px' }}>
-              <img
-                src={photo}
-                alt=""
-                style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-              />
-            </div>
-          ))}
+    <div class="container mx-auto px-5 py-2 lg:px-32 lg:pt-24">
+     <div> <Carousel /> </div> 
+    <div class="-m-1 flex flex-wrap md:-m-2">
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" />
         </div>
-      ))}
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp" />
+        </div>
+        <div class="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
+        </div>
+      </div>
+      <div class="flex w-1/2 flex-wrap">
+        <div class="w-full p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp" />
+        </div>
+        <div class="w-1/2 p-1 md:p-2">
+          <img
+            alt="gallery"
+            class="block h-full w-full rounded-lg object-cover object-center"
+            src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp" />
+        </div>
+      </div>
     </div>
-  );
+    </div>
+    
+  )
 };
 
 export default PhotoGallery;
