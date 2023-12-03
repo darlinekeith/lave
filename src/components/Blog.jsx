@@ -16,7 +16,7 @@ const Blog = () => {
         <div className='px-4 py-12'>
           <h2 className='text-3xl pt-8 text-slate-300 uppercase text-center'>Blog</h2>
           <h3 className='text-5xl font-bold py-6 text-center'>NATURE AND DEFINITION</h3>
-          <p className='py-4 text-3xl text-slate-300'>The Organization is an independent, non-political, non-denominational, community based participatory, gender sensitive and nonprofit making body whose goal is to address the challenges of development and the social wellbeing of vulnerable children and elderly LUWERO DISTRICT, UGANDA.</p>
+          <p className='py-4 text-3xl text-slate-300'>The Organization is an independent, non-political, non-denominational, community based participatory, gender sensitive and nonprofit making body whose goal is to address the challenges of life and the social wellbeing of vulnerable children and elderly LUWERO DISTRICT, UGANDA.</p>
         </div>
 
         <div className='grid  grid-cols-1 lg:grid-cols-3 relative gap-x-8 gap-y-16 px-4 pt-12 sm:pt-20 text-black'>

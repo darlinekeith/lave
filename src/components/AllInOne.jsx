@@ -17,7 +17,7 @@ const AllInOne = () => {
                 </div>
                 <div>
                     <h3 className='font-bold text-lg'>Love</h3>
-                    <p className='text-lg pt-2 pb-4'>Our love is unbound. Empathy and love are values that  build a healthy community. We not only provide care for the needy but to there families too that have been affected by the hardship.</p>
+                    <p className='text-lg pt-2 pb-4'>Our love is unbound. Empathy and love are values that  build a healthy community. We not only provide care for the needy but to their families too that have been affected by the hardship.</p>
                 </div>
             </div>
             <div className='flex'>
