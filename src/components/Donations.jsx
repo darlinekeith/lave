@@ -20,6 +20,12 @@ const Donations = () => {
     }
   ];
 
+  const handleContactClick = () => {
+    const subject = "Inquiry About Supporting LAVE Organization";
+    const body = `Hello LAVE Team,\n\nI'm interested in learning more about how I can support your organization.\n\nCould you please provide more information about:\n- Current initiatives\n- Volunteer opportunities\n- Other ways to contribute\n\nThank you,\n[Your Name]`;
+    window.location.href = `mailto:darlinel38@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section name='donations' className='w-full text-white py-24 relative bg-slate-900 overflow-hidden'>
       {/* Gradient overlay */}
@@ -75,7 +81,10 @@ const Donations = () => {
         {/* Additional call to action */}
         <div className='mt-16 text-center'>
           <p className='text-slate-300 mb-6'>Want to discuss other ways to give?</p>
-          <button className='px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors'>
+          <button 
+            onClick={handleContactClick}
+            className='px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors'
+          >
             Contact Us
           </button>
         </div>
