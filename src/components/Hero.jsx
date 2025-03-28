@@ -19,7 +19,7 @@ const Hero = () => {
           name="description"
           content="LAVE Uganda provides healthcare and support for vulnerable and elderly individuals. Join us in making a difference."
         />
-        <meta name="keywords" content="LAVE Uganda, elderly care, vulnerable support, community healthcare, donations" />
+        <meta name="keywords" content="LAVE Uganda, laveug, lave, elderly care, vulnerable support, community healthcare, donations" />
         <meta name="author" content="LAVE Uganda" />
         <meta property="og:title" content="LAVE Uganda - Support for the Vulnerable & Elderly" />
         <meta
