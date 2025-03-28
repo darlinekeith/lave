@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const Donations = () => {
   const donationOptions = [
@@ -6,7 +7,8 @@ const Donations = () => {
       type: "Monthly",
       amount: "$10",
       frequency: "/mo",
-      description: "Join our monthly donors and help sustain our programs. Monthly donors receive exclusive updates, full financial transparency, and our quarterly newsletter detailing our impact.",
+      description:
+        "Join our monthly donors and help sustain our programs. Monthly donors receive exclusive updates, full financial transparency, and our quarterly newsletter detailing our impact.",
       cta: "Start Monthly Giving",
       highlight: false
     },
@@ -14,7 +16,8 @@ const Donations = () => {
       type: "One-time",
       amount: "$20",
       frequency: "",
-      description: "Make an immediate impact with a single donation. Your contribution provides essentials like food, education materials, and sanitary products for the families we support.",
+      description:
+        "Make an immediate impact with a single donation. Your contribution provides essentials like food, education materials, and sanitary products for the families we support.",
       cta: "Give Once",
       highlight: true
     }
@@ -27,50 +30,74 @@ const Donations = () => {
   };
 
   return (
-    <section name='donations' className='w-full text-white py-24 relative bg-slate-900 overflow-hidden'>
+    <section name="donations" id="donations" className="w-full text-white py-24 relative bg-slate-900 overflow-hidden">
+      {/* SEO Optimization */}
+      <Helmet>
+        <title>Support LAVE Uganda - Make a Difference Today</title>
+        <meta
+          name="description"
+          content="Donate to LAVE Uganda and help us support vulnerable communities. Choose to make a one-time gift or become a monthly donor."
+        />
+        <meta
+          name="keywords"
+          content="LAVE Uganda, donate, charity, support, fundraising, nonprofit donations"
+        />
+        <meta property="og:title" content="Support LAVE Uganda - Make a Difference Today" />
+        <meta
+          property="og:description"
+          content="Your donation helps provide food, education, and healthcare to those in need. Give today and change lives."
+        />
+        <meta property="og:image" content="https://www.laveug.org/assets/donation-banner.png" />
+        <meta property="og:url" content="https://www.laveug.org/donate" />
+      </Helmet>
+
       {/* Gradient overlay */}
-      <div className='absolute inset-0 bg-gradient-to-br from-blue-900/70 to-slate-900 mix-blend-overlay'></div>
-      
-      <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <div className='text-center mb-16'>
-          <h2 className='text-xl uppercase tracking-wider text-blue-300 mb-2'>Donations</h2>
-          <h3 className='text-4xl md:text-5xl font-bold mb-6'>You Have a Role to Play</h3>
-          <p className='text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto'>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-slate-900 mix-blend-overlay"></div>
+
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-xl uppercase tracking-wider text-blue-300 mb-2">Donations</h2>
+          <h3 className="text-4xl md:text-5xl font-bold mb-6">You Have a Role to Play</h3>
+          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
             Together, we can create a better world. Partner with us today.
           </p>
         </div>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+        {/* Donation Options */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {donationOptions.map((option, index) => (
-            <div 
+            <div
               key={index}
               className={`bg-white text-slate-900 p-8 rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
                 option.highlight ? "ring-2 ring-blue-500" : ""
               }`}
             >
-              <span className={`inline-block px-4 py-1 rounded-full text-sm font-medium mb-6 ${
-                option.highlight ? "bg-blue-100 text-blue-800" : "bg-indigo-100 text-indigo-800"
-              }`}>
+              <span
+                className={`inline-block px-4 py-1 rounded-full text-sm font-medium mb-6 ${
+                  option.highlight ? "bg-blue-100 text-blue-800" : "bg-indigo-100 text-indigo-800"
+                }`}
+              >
                 {option.type}
               </span>
-              
-              <div className='mb-6'>
-                <p className='text-5xl font-bold flex items-baseline'>
+
+              <div className="mb-6">
+                <p className="text-5xl font-bold flex items-baseline">
                   {option.amount}
                   {option.frequency && (
-                    <span className='text-lg text-slate-500 ml-2'>{option.frequency}</span>
+                    <span className="text-lg text-slate-500 ml-2">{option.frequency}</span>
                   )}
                 </p>
               </div>
-              
-              <p className='text-lg text-slate-600 mb-8'>{option.description}</p>
-              
-              <button 
+
+              <p className="text-lg text-slate-600 mb-8">{option.description}</p>
+
+              <button
                 className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                  option.highlight 
-                    ? "bg-blue-600 hover:bg-blue-700 text-white" 
+                  option.highlight
+                    ? "bg-blue-600 hover:bg-blue-700 text-white"
                     : "bg-indigo-600 hover:bg-indigo-700 text-white"
                 }`}
+                aria-label={`Donate ${option.amount} ${option.type}`}
               >
                 {option.cta}
               </button>
@@ -79,18 +106,19 @@ const Donations = () => {
         </div>
 
         {/* Additional call to action */}
-        <div className='mt-16 text-center'>
-          <p className='text-slate-300 mb-6'>Want to discuss other ways to give?</p>
-          <button 
+        <div className="mt-16 text-center">
+          <p className="text-slate-300 mb-6">Want to discuss other ways to give?</p>
+          <button
             onClick={handleContactClick}
-            className='px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors'
+            className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors focus:ring focus:ring-blue-500"
+            aria-label="Contact LAVE Uganda for more donation options"
           >
             Contact Us
           </button>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Donations
+export default Donations;
