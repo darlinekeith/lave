@@ -38,7 +38,7 @@ const Navbar = () => {
             
             {/* Gallery Link - Visible on all screens */}
             <RouterLink
-              to="/photoGallery"
+              to="https://laveug.org/photoGallery"
               className="bg-indigo-600 text-white px-4 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm md:text-base"
             >
               Gallery
