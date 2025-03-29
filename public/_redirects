@@ -1,3 +1,3 @@
-/*    /index.html   200
+/index.html   200
 /blog/:slug   /blog/post.html?slug=:slug   200
-/*  https://laveug.org/:splat  301!
+https://www.laveug.org/photoGallery    https://laveug.org/photoGallery    301!
