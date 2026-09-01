@@ -2,6 +2,26 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Docker
+
+Docker Desktop is required. The development container mounts this repository and serves the app with hot reload:
+
+```sh
+docker compose --profile dev up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000). Stop it with `Ctrl+C`; use `docker compose --profile dev down` to remove the container.
+
+To build and preview the production bundle locally:
+
+```sh
+docker compose --profile prod up --build
+```
+
+Open [http://localhost:3000](http://localhost:3000). Stop it with `Ctrl+C`; use `docker compose --profile prod down` to remove the container.
+
+The two profiles use the same host port, so run only one at a time. React environment variables are embedded into the browser bundle at build time; never use `REACT_APP_*` for server-side secrets.
+
 ## Available Scripts
 
 In the project directory, you can run:
