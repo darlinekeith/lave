@@ -1,56 +1,48 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { FaHandsHelping, FaClock, FaUsers } from "react-icons/fa";
+import { FaHandsHelping, FaHeart, FaHome } from "react-icons/fa";
 
 const About = () => {
-  return (
-    <section name="about" className="w-full py-24 bg-gradient-to-r from-white via-gray-100 to-white">
-      {/* SEO Optimization */}
-      <Helmet>
-        <title>How We Work - LAVE Uganda</title>
-        <meta name="description" content="Discover how LAVE Uganda supports children and elderly beneficiaries through home visits, psycho-social support, and tailored parenting packages." />
-        <meta property="og:title" content="How We Work - LAVE Uganda" />
-        <meta property="og:description" content="Learn how LAVE Uganda provides monthly home visits, psycho-social support, and tailored caregiving packages for vulnerable families." />
-        <meta property="og:image" content="https://www.laveug.org/assets/about-banner.png" />
-      </Helmet>
+  const services = [
+    {
+      title: "Monthly family visits",
+      description: "We meet families regularly to understand changing needs and keep support connected to everyday life.",
+      icon: FaHome,
+    },
+    {
+      title: "Psycho-social support",
+      description: "We offer care and encouragement for vulnerable children, elderly people, and the families supporting them.",
+      icon: FaHeart,
+    },
+    {
+      title: "Tailored parenting packages",
+      description: "We provide essential parenting packages shaped around the needs of children and their caregivers.",
+      icon: FaHandsHelping,
+    },
+  ];
 
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Text Content */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">How We Work</h2>
-          <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
-            Every month, we visit families to provide <strong>psycho-social support</strong>, assess their needs, and deliver essential parenting packages tailored to both children and caregivers.
+  return (
+    <section id="about" className="page-section bg-lave-mist">
+      <div className="page-container">
+        <div className="max-w-3xl">
+          <p className="section-kicker">What we do</p>
+          <h2 className="section-title">Practical support, close to home</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            Every month, LAVE visits families, listens carefully, and provides support shaped around the needs of children, elderly people, and caregivers.
           </p>
         </div>
 
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-6 text-center">
-          {/** Stat Card 1 */}
-          <div className="bg-white border py-10 px-6 rounded-2xl shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
-            <div className="flex justify-center mb-4">
-              <FaHandsHelping className="text-6xl text-indigo-600" />
-            </div>
-            <p className="text-5xl font-bold text-indigo-600 mb-2">100%</p>
-            <p className="text-gray-700 font-medium">Impact Delivery</p>
-          </div>
+        <div className="mt-12 grid gap-px overflow-hidden border border-slate-200 bg-slate-200 md:grid-cols-3">
+          {services.map((service) => {
+            const Icon = service.icon;
 
-          {/** Stat Card 2 */}
-          <div className="bg-white border py-10 px-6 rounded-2xl shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
-            <div className="flex justify-center mb-4">
-              <FaClock className="text-6xl text-indigo-600" />
-            </div>
-            <p className="text-5xl font-bold text-indigo-600 mb-2">24/7</p>
-            <p className="text-gray-700 font-medium">Commitment</p>
-          </div>
-
-          {/** Stat Card 3 */}
-          <div className="bg-white border py-10 px-6 rounded-2xl shadow-lg transform transition-all hover:scale-105 hover:shadow-xl">
-            <div className="flex justify-center mb-4">
-              <FaUsers className="text-6xl text-indigo-600" />
-            </div>
-            <p className="text-5xl font-bold text-indigo-600 mb-2">20+</p>
-            <p className="text-gray-700 font-medium">Families Supported</p>
-          </div>
+            return (
+              <article key={service.title} className="bg-white p-8">
+                <Icon className="h-8 w-8 text-lave-blue" aria-hidden="true" />
+                <h3 className="mt-6 text-xl font-bold text-lave-ink">{service.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

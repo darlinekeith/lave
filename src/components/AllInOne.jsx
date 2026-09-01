@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
 import { CheckIcon } from "@heroicons/react/outline";
 
 const values = [
@@ -15,40 +14,30 @@ const values = [
 
 const AllInOne = () => {
   return (
-    <section name="values" className="w-full my-24">
-      {/* SEO Optimization */}
-      <Helmet>
-        <title>Our Values - LAVE Uganda</title>
-        <meta name="description" content="Discover the core values that guide LAVE Uganda in its mission to support vulnerable communities with love, respect, integrity, and accountability." />
-        <meta property="og:title" content="Our Values - LAVE Uganda" />
-        <meta property="og:description" content="Learn about LAVE Uganda’s guiding principles and how they shape our impact in the community." />
-        <meta property="og:image" content="https://www.laveug.org/assets/values-banner.png" />
-      </Helmet>
-
-      {/* Container */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-3">Our Values</h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+    <section id="values" className="page-section bg-white">
+      <div className="page-container">
+        <div className="max-w-3xl">
+          <p className="section-kicker">Our values</p>
+          <h2 className="section-title">What guides our work</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
             Our community partners guide us, and our values drive us.
           </p>
         </div>
 
-        {/* Value Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {values.map((value, index) => (
-            <div 
+            <article
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300 flex flex-col"
+              className="border border-slate-200 bg-white p-6"
             >
-              <div className="flex items-center mb-4">
-                <div className="bg-green-100 p-2 rounded-full">
-                  <CheckIcon className="w-6 h-6 text-green-600" />
+              <div className="flex items-center">
+                <div className="bg-lave-sky p-2">
+                  <CheckIcon className="h-5 w-5 text-lave-leaf" aria-hidden="true" />
                 </div>
-                <h3 className="font-bold text-lg ml-3 text-gray-900">{value.title}</h3>
+                <h3 className="ml-3 text-lg font-bold text-lave-ink">{value.title}</h3>
               </div>
-              <p className="text-gray-600 flex-grow">{value.description}</p>
-            </div>
+              <p className="mt-4 leading-7 text-slate-600">{value.description}</p>
+            </article>
           ))}
         </div>
       </div>

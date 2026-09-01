@@ -8,10 +8,11 @@ import Blog from "./Blog";
 import AllInOne from "./AllInOne";
 import Donations from "./Donations";
 import Footer from "./Footer";
+import CommunityImpact from "./CommunityImpact";
 
 const Hero = () => {
   return (
-    <div name="home" className="w-full relative">
+    <main id="home" className="w-full relative">
       {/* SEO Optimization */}
       <Helmet>
         <title>LAVE Uganda - Support for the Vulnerable & Elderly</title>
@@ -55,23 +56,25 @@ const Hero = () => {
             Together, we can help those losing hope while battling fatal diseases.
           </p>
 
-          <Link to="/photoGallery">
-            <button className="mt-8 bg-indigo-600 text-white px-8 py-3 rounded-xl text-lg hover:bg-indigo-700 transition-transform transform hover:scale-105 shadow-md">
-              Get Involved
-            </button>
+          <Link
+            to="/photoGallery"
+            className="mt-8 inline-flex rounded-md bg-lave-blue px-6 py-3 text-base font-bold text-white transition-colors hover:bg-sky-700"
+          >
+            See our community
           </Link>
         </div>
       </div>
 
       {/* Additional Sections */}
-      <div className="relative bg-zinc-100">
+        <div className="relative bg-zinc-100">
         <About />
+          <CommunityImpact />
         <Blog />
         <AllInOne />
         <Donations />
         <Footer />
       </div>
-    </div>
+    </main>
   );
 };
 

@@ -1,122 +1,126 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React, { useEffect, useRef, useState } from "react";
+import { FaHandHoldingHeart, FaRegHeart, FaUsers } from "react-icons/fa";
+import { HiX } from "react-icons/hi";
+import { siteContent } from "../data/siteContent";
 
 const Donations = () => {
-  const donationOptions = [
+  const [pendingAction, setPendingAction] = useState(null);
+  const closeButtonRef = useRef(null);
+  const previousFocusRef = useRef(null);
+
+  const supportOptions = [
     {
-      type: "Monthly",
-      amount: "$10",
-      frequency: "/mo",
-      description:
-        "Join our monthly donors and help sustain our programs. Monthly donors receive exclusive updates, full financial transparency, and our quarterly newsletter detailing our impact.",
-      cta: "Start Monthly Giving",
-      highlight: false
+      title: "Sponsor a family",
+      description: "Help LAVE continue regular visits and tailored support for vulnerable families.",
+      icon: FaHandHoldingHeart,
+      action: "sponsor",
     },
     {
-      type: "One-time",
-      amount: "$20",
-      frequency: "",
-      description:
-        "Make an immediate impact with a single donation. Your contribution provides essentials like food, education materials, and sanitary products for the families we support.",
-      cta: "Give Once",
-      highlight: true
-    }
+      title: "Make a donation",
+      description: "Your gift helps LAVE respond to the needs of children, elderly people, and caregivers.",
+      icon: FaRegHeart,
+      action: "donate",
+    },
+    {
+      title: "Volunteer with us",
+      description: "Get in touch to learn about practical ways to support LAVE's community work.",
+      icon: FaUsers,
+      action: "volunteer",
+    },
   ];
 
-  const handleContactClick = () => {
-    const subject = "Inquiry About Supporting LAVE Organization";
-    const body = `Hello LAVE Team,\n\nI'm interested in learning more about how I can support your organization.\n\nCould you please provide more information about:\n- Current initiatives\n- Volunteer opportunities\n- Other ways to contribute\n\nThank you,\n[Your Name]`;
-    window.location.href = `mailto:darlinel38@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  useEffect(() => {
+    if (!pendingAction) {
+      return undefined;
+    }
+
+    previousFocusRef.current = document.activeElement;
+    closeButtonRef.current?.focus();
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setPendingAction(null);
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+      previousFocusRef.current?.focus();
+    };
+  }, [pendingAction]);
+
+  const handleSupportAction = (action) => {
+    if (action === "volunteer") {
+      const subject = "Volunteer inquiry for LAVE Uganda";
+      window.location.href = `mailto:${siteContent.supportEmail}?subject=${encodeURIComponent(subject)}`;
+      return;
+    }
+
+    if (siteContent.goFundMeLinks[action]) {
+      window.open(siteContent.goFundMeLinks[action], "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    setPendingAction(action);
   };
 
   return (
-    <section name="donations" id="donations" className="w-full text-white py-24 relative bg-slate-900 overflow-hidden">
-      {/* SEO Optimization */}
-      <Helmet>
-        <title>Support LAVE Uganda - Make a Difference Today</title>
-        <meta
-          name="description"
-          content="Donate to LAVE Uganda and help us support vulnerable communities. Choose to make a one-time gift or become a monthly donor."
-        />
-        <meta
-          name="keywords"
-          content="LAVE Uganda, donate, charity, support, fundraising, nonprofit donations"
-        />
-        <meta property="og:title" content="Support LAVE Uganda - Make a Difference Today" />
-        <meta
-          property="og:description"
-          content="Your donation helps provide food, education, and healthcare to those in need. Give today and change lives."
-        />
-        <meta property="og:image" content="https://www.laveug.org/assets/donation-banner.png" />
-        <meta property="og:url" content="https://www.laveug.org/donate" />
-      </Helmet>
-
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 to-slate-900 mix-blend-overlay"></div>
-
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-xl uppercase tracking-wider text-blue-300 mb-2">Donations</h2>
-          <h3 className="text-4xl md:text-5xl font-bold mb-6">You Have a Role to Play</h3>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-3xl mx-auto">
-            Together, we can create a better world. Partner with us today.
+    <section id="donations" className="page-section bg-lave-sky">
+      <div className="page-container">
+        <div className="max-w-3xl">
+          <p className="section-kicker">How you can help</p>
+          <h2 className="section-title">There is a role for everyone</h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            Partner with LAVE to help strengthen care and opportunity for vulnerable people in our community.
           </p>
         </div>
 
-        {/* Donation Options */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {donationOptions.map((option, index) => (
-            <div
-              key={index}
-              className={`bg-white text-slate-900 p-8 rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
-                option.highlight ? "ring-2 ring-blue-500" : ""
-              }`}
-            >
-              <span
-                className={`inline-block px-4 py-1 rounded-full text-sm font-medium mb-6 ${
-                  option.highlight ? "bg-blue-100 text-blue-800" : "bg-indigo-100 text-indigo-800"
-                }`}
-              >
-                {option.type}
-              </span>
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {supportOptions.map((option) => {
+            const Icon = option.icon;
 
-              <div className="mb-6">
-                <p className="text-5xl font-bold flex items-baseline">
-                  {option.amount}
-                  {option.frequency && (
-                    <span className="text-lg text-slate-500 ml-2">{option.frequency}</span>
-                  )}
-                </p>
-              </div>
-
-              <p className="text-lg text-slate-600 mb-8">{option.description}</p>
-
+            return (
+              <article key={option.action} className="flex min-h-72 flex-col border border-sky-200 bg-white p-7">
+                <Icon className="h-8 w-8 text-lave-blue" aria-hidden="true" />
+                <h3 className="mt-6 text-xl font-bold text-lave-ink">{option.title}</h3>
+                <p className="mt-3 flex-grow leading-7 text-slate-600">{option.description}</p>
               <button
-                className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                  option.highlight
-                    ? "bg-blue-600 hover:bg-blue-700 text-white"
-                    : "bg-indigo-600 hover:bg-indigo-700 text-white"
-                }`}
-                aria-label={`Donate ${option.amount} ${option.type}`}
+                type="button"
+                onClick={() => handleSupportAction(option.action)}
+                className="mt-8 inline-flex justify-center rounded-md bg-lave-blue px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-700"
               >
-                {option.cta}
+                {option.action === "volunteer" ? "Contact LAVE" : option.title}
               </button>
-            </div>
-          ))}
-        </div>
-
-        {/* Additional call to action */}
-        <div className="mt-16 text-center">
-          <p className="text-slate-300 mb-6">Want to discuss other ways to give?</p>
-          <button
-            onClick={handleContactClick}
-            className="px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors focus:ring focus:ring-blue-500"
-            aria-label="Contact LAVE Uganda for more donation options"
-          >
-            Contact Us
-          </button>
+              </article>
+            );
+          })}
         </div>
       </div>
+
+      {pendingAction && (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center bg-slate-950/70 px-5" role="presentation">
+          <div className="w-full max-w-md rounded-md bg-white p-7 shadow-2xl" role="dialog" aria-modal="true" aria-labelledby="giving-dialog-title">
+            <div className="flex items-start justify-between gap-6">
+              <div>
+                <p className="section-kicker">Giving with LAVE</p>
+                <h2 id="giving-dialog-title" className="mt-3 text-2xl font-bold text-lave-ink">Online giving is being prepared</h2>
+              </div>
+              <button ref={closeButtonRef} type="button" onClick={() => setPendingAction(null)} className="-mr-2 -mt-2 inline-flex h-10 w-10 items-center justify-center rounded-md text-slate-600 hover:bg-slate-100" aria-label="Close giving dialog">
+                <HiX className="h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
+            <p className="mt-5 leading-7 text-slate-600">
+              The LAVE {pendingAction === "sponsor" ? "sponsorship" : "donation"} link will be available here soon. Please contact LAVE to discuss support in the meantime.
+            </p>
+            <a href={`mailto:${siteContent.supportEmail}?subject=${encodeURIComponent("Support inquiry for LAVE Uganda")}`} className="mt-7 inline-flex rounded-md bg-lave-blue px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-700">
+              Email LAVE
+            </a>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
