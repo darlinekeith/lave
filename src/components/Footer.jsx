@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import {
     FaFacebook,
     FaInstagram,
-    FaArrowUp
+  FaArrowUp,
+  FaEnvelope
 } from 'react-icons/fa';
 import { siteContent } from "../data/siteContent";
 
@@ -40,7 +41,10 @@ const Footer = () => {
         </div>
         <div className="md:justify-self-end">
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-200">Contact</p>
-          <a href={`mailto:${siteContent.supportEmail}`} className="mt-4 inline-block text-lg font-semibold text-white hover:text-sky-200">{siteContent.supportEmail}</a>
+          <a href={`mailto:${siteContent.supportEmail}`} className="mt-4 inline-flex items-center gap-3 text-lg font-semibold text-white hover:text-sky-200">
+            <FaEnvelope aria-hidden="true" />
+            Email LAVE
+          </a>
           <div className="mt-6 flex items-center gap-4">
             <a href="https://www.facebook.com" target="_blank" rel="noreferrer" aria-label="LAVE on Facebook" className="text-2xl text-white hover:text-sky-200"><FaFacebook aria-hidden="true" /></a>
             <a href="https://www.instagram.com" target="_blank" rel="noreferrer" aria-label="LAVE on Instagram" className="text-2xl text-white hover:text-sky-200"><FaInstagram aria-hidden="true" /></a>

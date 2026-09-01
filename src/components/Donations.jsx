@@ -54,8 +54,7 @@ const Donations = () => {
 
   const handleSupportAction = (action) => {
     if (action === "volunteer") {
-      const subject = "Volunteer inquiry for LAVE Uganda";
-      window.location.href = `mailto:${siteContent.supportEmail}?subject=${encodeURIComponent(subject)}`;
+      window.location.hash = "volunteer";
       return;
     }
 
@@ -92,7 +91,7 @@ const Donations = () => {
                 onClick={() => handleSupportAction(option.action)}
                 className="mt-8 inline-flex justify-center rounded-md bg-lave-blue px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-sky-700"
               >
-                {option.action === "volunteer" ? "Contact LAVE" : option.title}
+                {option.action === "volunteer" ? "Learn about volunteering" : option.title}
               </button>
               </article>
             );

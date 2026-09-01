@@ -8,13 +8,13 @@ const Blog = () => {
     <section id="who-we-are" className="relative overflow-hidden bg-lave-ink py-16 md:py-20">
       <div className="absolute inset-0">
         <img
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover opacity-20"
           src={supportImg}
           alt=""
           loading="lazy"
           decoding="async"
         />
-        <div className="absolute inset-0 bg-lave-ink/85"></div>
+        <div className="absolute inset-0 bg-lave-ink/90"></div>
       </div>
 
       <div className="page-container relative z-10 px-5 text-white sm:px-8">

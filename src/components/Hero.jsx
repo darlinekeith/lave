@@ -9,6 +9,7 @@ import AllInOne from "./AllInOne";
 import Donations from "./Donations";
 import Footer from "./Footer";
 import CommunityImpact from "./CommunityImpact";
+import Volunteer from "./Volunteer";
 
 const Hero = () => {
   return (
@@ -72,6 +73,7 @@ const Hero = () => {
         <Blog />
         <AllInOne />
         <Donations />
+        <Volunteer />
         <Footer />
       </div>
     </main>

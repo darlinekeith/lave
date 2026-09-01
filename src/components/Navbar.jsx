@@ -16,6 +16,7 @@ const Navbar = () => {
     { label: 'Impact', href: '/#impact' },
     { label: 'Who We Are', href: '/#who-we-are' },
     { label: 'How to Help', href: '/#donations' },
+    { label: 'Volunteer', href: '/#volunteer' },
   ];
 
   return (
