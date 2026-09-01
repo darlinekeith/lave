@@ -16,7 +16,7 @@ const CommunityImpact = () => {
           <img
             src={communityImage}
             alt="LAVE community members together"
-            className="aspect-[4/3] w-full object-cover"
+            className="content-image"
             width="600"
             height="450"
             loading="lazy"
@@ -28,8 +28,8 @@ const CommunityImpact = () => {
       <section id="impact" className="page-section bg-lave-ink text-white">
         <div className="page-container grid items-end gap-8 md:grid-cols-[1fr_auto]">
           <div className="max-w-2xl">
-            <p className="text-sm font-bold uppercase tracking-[0.16em] text-sky-200">Our impact</p>
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">Care that reaches families where they are</h2>
+            <p className="section-kicker-dark">Our impact</p>
+            <h2 className="section-title-dark">Care that reaches families where they are</h2>
             <p className="mt-5 text-lg leading-8 text-slate-200">
               Through regular visits and tailored support, LAVE has supported more than 20 families.
             </p>

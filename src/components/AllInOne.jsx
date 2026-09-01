@@ -28,7 +28,7 @@ const AllInOne = () => {
           {values.map((value, index) => (
             <article
               key={index}
-              className="border border-slate-200 bg-white p-6"
+              className="content-card"
             >
               <div className="flex items-center">
                 <div className="bg-lave-sky p-2">

@@ -36,8 +36,8 @@ const About = () => {
             const Icon = service.icon;
 
             return (
-              <article key={service.title} className="bg-white p-8">
-                <Icon className="h-8 w-8 text-lave-blue" aria-hidden="true" />
+              <article key={service.title} className="content-card">
+                <Icon className="content-icon text-lave-blue" aria-hidden="true" />
                 <h3 className="mt-6 text-xl font-bold text-lave-ink">{service.title}</h3>
                 <p className="mt-3 leading-7 text-slate-600">{service.description}</p>
               </article>

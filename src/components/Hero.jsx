@@ -67,7 +67,7 @@ const Hero = () => {
       </div>
 
       {/* Additional Sections */}
-        <div className="relative bg-zinc-100">
+        <div className="relative bg-lave-mist">
         <About />
           <CommunityImpact />
         <Blog />

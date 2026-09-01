@@ -82,8 +82,8 @@ const Donations = () => {
             const Icon = option.icon;
 
             return (
-              <article key={option.action} className="flex min-h-72 flex-col border border-sky-200 bg-white p-7">
-                <Icon className="h-8 w-8 text-lave-blue" aria-hidden="true" />
+              <article key={option.action} className="content-card flex min-h-72 flex-col border-sky-200">
+                <Icon className="content-icon text-lave-blue" aria-hidden="true" />
                 <h3 className="mt-6 text-xl font-bold text-lave-ink">{option.title}</h3>
                 <p className="mt-3 flex-grow leading-7 text-slate-600">{option.description}</p>
               <button

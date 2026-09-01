@@ -61,7 +61,7 @@ const PhotoGallery = () => {
   }, [selectedImage]);
 
   return (
-    <main className="min-h-screen bg-gray-50 pb-16 pt-28 sm:pt-32">
+    <main className="min-h-screen bg-lave-mist pb-16 pt-28 sm:pt-32">
       {/* SEO Optimization */}
       <Helmet>
         <title>LAVE Uganda - Photo Gallery</title>
@@ -93,7 +93,7 @@ const PhotoGallery = () => {
           {images.map((image) => (
             <button
               key={image.alt}
-              className="group relative aspect-[4/3] overflow-hidden bg-slate-200 text-left"
+              className="content-image group relative overflow-hidden bg-slate-200 text-left"
               onClick={() => handleImageClick(image)}
               aria-label={`View ${image.alt}`}
             >
