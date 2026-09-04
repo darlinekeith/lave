@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="page-container flex h-20 items-center justify-between px-5 sm:px-8">
         <RouterLink to="/" onClick={closeMenu} className="flex shrink-0 items-center">
               <img 
-                className="h-12 w-auto object-contain sm:h-14"
+                className="h-10 w-auto object-contain sm:h-12"
                 src={logos} 
                 alt="LAVE Logo" 
               />

@@ -2,14 +2,38 @@ import React from "react";
 import { CheckIcon } from "@heroicons/react/outline";
 
 const values = [
-  { title: "Love", description: "Our love is unbound. Empathy and love build a healthy community. We provide care not just for the needy but also for their families who are affected by hardship." },
-  { title: "Respect", description: "We deeply admire those we help, promoting Values-Based Leadership within families and communities to inspire awareness of core human values." },
-  { title: "Concern for Others", description: "We embrace empathy—understanding how others experience the world. This helps us make better decisions that impact those around us." },
-  { title: "Child-Centered", description: "Many Ugandan children lose parents due to conflict or disease. We focus on ensuring their well-being, even in households with minimal income." },
-  { title: "Integrity", description: "We uphold high ethical standards, staying fair, objective, and transparent in all our decisions and actions—doing the right thing, even when unseen." },
-  { title: "Accountability", description: "We celebrate success and learn from mistakes through open, two-way communication—building trust, confidence, and legitimacy in our work." },
-  { title: "Professionalism", description: "We maintain professionalism to instill confidence among beneficiaries and organizations that collaborate with us to provide services." },
-  { title: "Healthcare", description: "We advocate for quality healthcare services for all, including the vulnerable, regardless of financial status." }
+  { 
+    title: "Love (Unbound & Generous)", 
+    description: "Our love has no boundaries. Empathy and love build a healthy, resilient community. We provide care not just for the person in front of us, but extend our arms to embrace their entire family." 
+  },
+  { 
+    title: "Respect (Honor & Dignity)", 
+    description: "We deeply admire the resilience of those we help. We treat every child and grandmother as an honored equal, promoting values-based leadership within families." 
+  },
+  { 
+    title: "Concern for Others", 
+    description: "We actively step into other people's shoes. Understanding how our neighbors experience hardship helps us make thoughtful, gentle, and effective decisions." 
+  },
+  { 
+    title: "Child-Centered Focus", 
+    description: "Children are the heart of our community. In a region where disease and conflict take parents too soon, we prioritize child protection, education, and joy." 
+  },
+  { 
+    title: "Integrity in Unseen Acts", 
+    description: "We uphold the highest ethical standards. We do what is right simply because it is right, honoring the trust placed in us by our beneficiaries and supporters." 
+  },
+  { 
+    title: "Accountability & Openness", 
+    description: "We celebrate our successes and humbly learn from our mistakes through open, two-way communication with our community and partners." 
+  },
+  { 
+    title: "Professionalism & Trust", 
+    description: "We maintain high standards of safety, healthcare monitoring, and care to instill lasting confidence among beneficiaries and partner organizations." 
+  },
+  { 
+    title: "Healthcare for Everyone", 
+    description: "We advocate passionately for quality healthcare services for all, believing that wellness and medical attention should never depend on financial status." 
+  }
 ];
 
 const AllInOne = () => {
@@ -17,10 +41,10 @@ const AllInOne = () => {
     <section id="values" className="page-section bg-white">
       <div className="page-container">
         <div className="max-w-3xl">
-          <p className="section-kicker">Our values</p>
-          <h2 className="section-title">What guides our work</h2>
+          <p className="section-kicker">Our core values</p>
+          <h2 className="section-title">The Pillars of Our House</h2>
           <p className="mt-5 text-lg leading-8 text-slate-600">
-            Our community partners guide us, and our values drive us.
+            Our values are not written on cold office walls; they are living principles that direct how we talk to a child, comfort an elder, and honor every shilling entrusted to us.
           </p>
         </div>
 
@@ -28,15 +52,17 @@ const AllInOne = () => {
           {values.map((value, index) => (
             <article
               key={index}
-              className="content-card"
+              className="content-card flex flex-col justify-between"
             >
-              <div className="flex items-center">
-                <div className="bg-lave-sky p-2">
-                  <CheckIcon className="h-5 w-5 text-lave-leaf" aria-hidden="true" />
+              <div>
+                <div className="flex items-center">
+                  <div className="bg-lave-sky p-2 rounded-md">
+                    <CheckIcon className="h-5 w-5 text-lave-leaf" aria-hidden="true" />
+                  </div>
+                  <h3 className="ml-3 text-lg font-bold text-lave-ink">{value.title}</h3>
                 </div>
-                <h3 className="ml-3 text-lg font-bold text-lave-ink">{value.title}</h3>
+                <p className="mt-4 leading-7 text-slate-600">{value.description}</p>
               </div>
-              <p className="mt-4 leading-7 text-slate-600">{value.description}</p>
             </article>
           ))}
         </div>
