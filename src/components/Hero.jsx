@@ -28,8 +28,9 @@ const Hero = () => {
           property="og:description"
           content="Join LAVE Uganda in supporting vulnerable children and elderly grandmothers in Luwero District with home healthcare and community care."
         />
-        <meta property="og:image" content="https://www.laveug.org/assets/child-ga48769257_1280.jpg" />
-        <meta property="og:url" content="https://www.laveug.org" />
+        <meta property="og:image" content="https://laveug.org/" />
+        <meta property="og:url" content="https://laveug.org/" />
+        <link rel="canonical" href="https://laveug.org/" />
       </Helmet>
 
       {/* Background Image */}
