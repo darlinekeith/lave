@@ -64,7 +64,7 @@ const PhotoGallery = () => {
     <main className="min-h-screen bg-lave-mist pb-16 pt-28 sm:pt-32">
       {/* SEO Optimization */}
       <Helmet>
-        <title>LAVE Uganda - Photo Gallery</title>
+        <title>LAVE Uganda | Community Photo Gallery</title>
         <meta
           name="description"
           content="Browse our gallery showcasing LAVE Uganda's community outreach and support programs."
@@ -76,8 +76,8 @@ const PhotoGallery = () => {
           property="og:description"
           content="Explore moments of impact from LAVE Uganda's efforts in supporting vulnerable communities."
         />
-        <meta property="og:image" content="https://www.laveug.org/assets/img8.png" />
-        <meta property="og:url" content="https://www.laveug.org/gallery" />
+        <meta property="og:url" content="https://laveug.org/photoGallery" />
+        <link rel="canonical" href="https://laveug.org/photoGallery" />
       </Helmet>
 
       <section className="page-container px-5 sm:px-8">
